@@ -10,7 +10,7 @@
 /coverage
 
 # trash
-/trash.txt
+trash.txt
 
 # next.js
 /.next/
