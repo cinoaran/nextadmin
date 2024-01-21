@@ -1,0 +1,73 @@
+.userList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.userDetails {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0px;
+}
+
+.userDetails img {
+  object-fit: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 0.5px solid rgba(var(--dark-color), 0.5);
+}
+
+.userText {
+  line-height: normal;
+  font-weight: 400;
+  font-size: 14px;
+}
+.userAmount {
+  font-weight: 600;
+}
+
+.userStatus,
+.userName {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+}
+
+.done,
+.cancelled,
+.pending {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.3px solid #000;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+}
+
+.done {
+  background-color: hsl(106, 80%, 35%);
+}
+
+.cancelled {
+  background-color: hsl(355, 97%, 47%);
+}
+
+.pending {
+  background: hsl(240, 2%, 10%);
+  border-radius: 50%;
+  animation: animationColors 1.4s, ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animationColors {
+  0% {
+    background: rgb(225, 222, 228);
+  }
+  100% {
+    background: hsl(240, 2%, 10%);
+  }
+}

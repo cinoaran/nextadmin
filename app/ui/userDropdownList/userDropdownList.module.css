@@ -1,0 +1,120 @@
+.userPopup {
+  position: absolute;
+  right: -50px;
+  top: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border: 0.3px solid rgba(var(--primary-color), 0.5);
+  border-radius: 10px;
+  color: rgba(var(--dark-color), 0.6);
+  background: white;
+  animation-name: showText;
+  animation-duration: 1s;
+}
+
+@keyframes showText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.userPopupDetails {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin: 20px 10px;
+  width: 280px;
+  min-height: 95px;
+  gap: 20px;
+}
+
+.userAvatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgba(var(--dark-color), 0.8);
+}
+
+.userAvatarContent p {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  color: white;
+  font-size: 3.4em;
+}
+
+.userAvatarContent img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile {
+  position: relative;
+  flex: 1;
+}
+
+.profileLink {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(var(--dark-color), 0.2);
+  line-height: 1.8;
+  margin-top: 10px;
+}
+
+.profileLink svg {
+  color: rgba(var(--dark-color), 0.2);
+}
+
+.profileLink:hover {
+  color: rgb(var(--dark-color));
+  font-weight: 400;
+}
+
+.profileHeader {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: rgba(var(--dark-color), 0.8);
+  padding-bottom: 15px;
+  border-bottom: 0.5px solid rgba(var(--dark-color), 0.3);
+}
+
+.close {
+  position: absolute;
+  top: -15px;
+  right: 0px;
+  width: 12px;
+  height: 12px;
+  border: 0.3px solid rgba(var(--dark-color), 0.8);
+  border-radius: 50%;
+  color: rgba(var(--dark-color), 0.9);
+  cursor: pointer;
+}
+
+.close:hover {
+  background-color: rgba(var(--dark-color), 0.8);
+  color: white;
+}
+
+.activeIcon svg {
+  color: rgba(var(--dark-color), 0.9);
+  font-weight: 500;
+}
+.activeText {
+  color: rgb(var(--dark-color));
+  font-weight: 500;
+}

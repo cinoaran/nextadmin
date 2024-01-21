@@ -1,0 +1,10 @@
+.container {
+  width: 100%;
+  color: rgba(var(--dark-color), 0.7);
+}
+
+.title {
+  margin-bottom: 20px;
+  font-weight: 300;
+  font-size: 2em;
+}

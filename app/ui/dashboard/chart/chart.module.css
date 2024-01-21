@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(var(--dark-color), 0.8);
+}
+
+.chartInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+  flex: 1;
+  height: 100%;
+}
+
+.chartIcon,
+.pageLink {
+  border-bottom: 0.3px solid rgba(var(--dark-color), 0.3);
+}
+
+.pageLink:hover {
+  border-bottom: 0.3px solid rgba(var(--dark-color), 0.8);
+  font-weight: 600;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 400;
+  font-size: 0.9em;
+}
+
+.chartScreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  flex: 1;
+  height: 185px;
+}
+
+.percentage {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  font-weight: 400;
+  font-size: 0.9em;
+}
+
+.duration {
+  color: rgba(var(--success-color), 0.8);
+  font-weight: 600;
+}

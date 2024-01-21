@@ -1,0 +1,38 @@
+.container {
+  width: 100%;
+  color: rgba(var(--dark-color), 0.8);
+}
+
+.wishInfo {
+  margin-bottom: 20px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 400;
+  font-size: 0.9em;
+}
+
+.pageLink {
+  display: block;
+  width: 100%;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.wishIcon,
+.pageLink span {
+  border-bottom: 0.3px solid rgba(var(--dark-color), 0.3);
+}
+
+.pageLink span:hover {
+  border-bottom: 0.3px solid rgba(var(--dark-color), 0.8);
+  font-weight: 600;
+}
+
+.infoText {
+  text-align: center;
+  margin-bottom: 25px;
+}

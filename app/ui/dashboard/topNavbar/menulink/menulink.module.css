@@ -1,0 +1,52 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 8px;
+  margin: 10px 0px;
+}
+
+.icon {
+  background-color: rgba(var(--dark-color), 0.4);
+  padding: 6px;
+  margin-top: 10px;
+  border-radius: 50%;
+}
+
+.icon svg {
+  color: white;
+}
+
+.title {
+  line-height: 1.4;
+  font-size: 0.85rem;
+  width: 150px;
+  margin-top: 10px;
+  animation-name: showText;
+  animation-duration: 1s;
+  color: rgba(var(--dark-color), 0.4);
+}
+
+.title:hover {
+  color: rgb(var(--dark-color));
+  font-weight: 500;
+}
+
+@keyframes showText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.activeIcon {
+  background-color: rgba(var(--dark-color), 0.9);
+  font-weight: 500;
+}
+.activeText {
+  color: rgba(var(--dark-color), 0.9);
+  font-weight: 600;
+}

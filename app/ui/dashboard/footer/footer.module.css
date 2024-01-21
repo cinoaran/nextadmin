@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 77vw;
+  margin: 0px auto;
+  padding: 20px 0px;
+}
+
+.footerLogo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100px;
+}
+
+.logo {
+  display: flex;
+  position: relative;
+  align-items: center;
+  gap: 20px;
+  line-height: 6em;
+}
+
+.centerLogoText {
+  color: rgba(var(--dark-color), 0.8);
+  font-size: 3.5em;
+  font-weight: 500;
+}
+
+.rightLogoText {
+  position: absolute;
+  top: 41px;
+  left: 15px;
+  color: rgba(var(--dark-color), 0.8);
+  font-size: 0.85em;
+  line-height: 1.15em;
+  background: white;
+}
+
+.copyright {
+  color: rgba(var(--dark-color), 0.8);
+  font-size: 0.85em;
+  text-transform: uppercase;
+}

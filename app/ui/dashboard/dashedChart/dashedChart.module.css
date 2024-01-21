@@ -1,0 +1,31 @@
+.container {
+  height: 380px;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2px;
+}
+.pageLink {
+  line-height: 1.4;
+  border-bottom: 0.3px solid rgba(var(--dark-color), 0.3);
+}
+
+.pageLink:hover {
+  border-bottom: 0.3px solid rgba(var(--dark-color), 0.8);
+  font-weight: 600;
+}
+
+.title {
+  margin-bottom: 20px;
+  font-weight: 300;
+  font-size: 2em;
+}
+
+.YAxis,
+.XAxis {
+  font-weight: 100;
+  font-size: 0.7em;
+  opacity: 0.5;
+}

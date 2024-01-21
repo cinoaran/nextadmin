@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 90%;
+  margin: 38.5px auto;
+}
+
+.logo {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  line-height: 6em;
+}
+
+.centerLogoText {
+  color: rgba(var(--dark-color), 0.8);
+  font-size: 6.5em;
+  font-weight: 500;
+}
+
+.rightLogoText {
+  position: absolute;
+  top: 40px;
+  left: 30px;
+  bottom: 34px;
+  color: rgba(var(--dark-color), 0.8);
+  font-size: 1.2em;
+  line-height: 0.95em;
+  background: white;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  border: 0.4px solid rgba(var(--primary-color), 0.8);
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  color: var(--primary-color);
+  padding: 6px;
+  cursor: pointer;
+}
+
+.icon:hover {
+  background-color: rgb(var(--dark-color));
+  color: white;
+}
