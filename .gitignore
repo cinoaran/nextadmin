@@ -9,8 +9,9 @@
 # testing
 /coverage
 
-# trash
+# sample data and trash
 trash.txt
+data.js
 
 # next.js
 /.next/
