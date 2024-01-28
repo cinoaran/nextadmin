@@ -9,8 +9,8 @@
   position: relative;
   border-radius: 18px;
   box-shadow: var(--shadow) rgba(var(--gray-color), 0.2);
-  width: clamp(360px, 50%, 550px);
-  padding: 20px;
+  width: 97%;
+  padding: 10px;
   overflow: hidden;
 }
 
@@ -22,12 +22,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 0px 30px;
 }
 
 .headerTitle,
 .bodyTitle {
-  font-weight: 300;
-  font-size: 1.4em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 400;
+  font-size: 1.1em;
 }
 
 .bodyTitle {
@@ -49,8 +53,8 @@
 
 .userImage img {
   object-fit: cover;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: 0.5px solid rgba(var(--dark-color), 0.5);
 }
@@ -73,11 +77,12 @@
 
 .colorCorner {
   position: absolute;
-  width: 110px;
-  height: 110px;
+  width: 85px;
+  height: 85px;
   top: -45px;
   left: -45px;
   background: rgba(var(--dark-color), 0.3);
+  border: 0.3px solid rgba(var(--dark-color), 0.4);
   border-radius: 70%;
 }
 

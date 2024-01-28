@@ -1,25 +1,29 @@
 .search {
   display: flex;
   align-items: center;
-  gap: 20;
-  background-color: var(--bg);
-  padding: 10px;
+  border: 0.3px solid rgba(var(--dark-color), 0.3);
   border-radius: 10px;
 }
 
 .input {
-  background-color: transparent;
-  padding: 2px;
+  max-width: 160px;
   border: none;
-  color: var(--text);
-  outline: none;
+  color: rgba(var(--dark-color), 0.6);
+}
+
+.input::placeholder {
+  color: rgba(var(--dark-color), 0.4);
 }
 
 .icon {
   display: flex;
   align-items: center;
-  gap: 10;
+  gap: 10px;
   width: 40px;
-  margin: 0px;
   padding: 2px;
+  color: rgba(var(--dark-color), 0.8);
+}
+
+.input:hover::placeholder {
+  color: rgba(var(--dark-color), 0.5);
 }

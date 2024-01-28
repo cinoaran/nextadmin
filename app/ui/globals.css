@@ -2,7 +2,7 @@
   --primary-color: 66, 56, 255;
   --dark-color: 4, 0, 87;
   --gray-color: 89, 88, 106;
-
+  --white-color: 255, 255, 255;
   --light-color: 242, 246, 253;
   --danger-color: 255, 0, 0;
   --success-color: 27, 187, 43;
@@ -41,16 +41,6 @@ canvas,
 svg {
   display: block;
   max-width: 100%;
-}
-
-/* 7. Remove built-in form typography styles */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-  cursor: pointer;
-  border: none;
 }
 
 /* 8. Avoid text overflows */
@@ -103,6 +93,17 @@ label {
   font-weight: 900;
 }
 
+/* 7. Remove built-in form typography styles */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -115,9 +116,8 @@ textarea {
   margin: 0px;
   font-size: normal;
   border: none;
-  color: rgba(var(--light-color), 0.8);
-  background-color: rgba(var(--light-color), 0.6);
-  caret-color: rgba(var(--light-color), 0.8);
+  background-color: transparent;
+  caret-color: rgba(var(--dark-color), 0.6);
 }
 
 input[type="text"],
@@ -125,15 +125,11 @@ input[type="email"],
 input[type="password"],
 input[type="date"],
 textarea {
-  padding: 0.3rem;
+  padding: 0.2rem;
 }
 
 select {
-  padding: 0.4rem;
-}
-
-input::placeholder {
-  color: rgba(var(--dark-color), 0.4);
+  padding: 0.2rem;
 }
 
 a,

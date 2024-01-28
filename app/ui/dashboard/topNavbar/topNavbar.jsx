@@ -11,6 +11,7 @@ import {
   MdArrowDropDown,
   MdClose,
   MdDashboard,
+  MdOutlineVerticalAlignTop,
 } from "react-icons/md";
 
 import styles from "./topNavbar.module.css";
@@ -99,7 +100,11 @@ const TopNavbar = () => {
           onClick={() => setSideBarStatus(!sideBarStatus)}
         >
           <h2 className={styles.toggleHeader}>
-            <MdOutlineSettings size="26" />
+            {!sideBarStatus ? (
+              <MdOutlineSettings size="24" />
+            ) : (
+              <MdOutlineVerticalAlignTop size="19" />
+            )}
           </h2>
         </div>
         {sideBarStatus &&

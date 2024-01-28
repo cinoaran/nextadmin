@@ -24,6 +24,7 @@
 }
 
 .userPopupDetails {
+  position: relative;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -32,6 +33,19 @@
   width: 280px;
   min-height: 95px;
   gap: 20px;
+}
+
+.close {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  background: rgba(var(--light-color), 0.6);
+  top: 20px;
+  right: 20px;
+}
+
+.close:hover {
+  background: rgba(var(--light-color), 0.2);
 }
 
 .userAvatar {

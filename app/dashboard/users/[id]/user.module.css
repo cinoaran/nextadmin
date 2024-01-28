@@ -1,0 +1,110 @@
+.container {
+  max-width: 90%;
+  margin: 0px auto;
+  padding: 10px 0px;
+  min-height: 700px;
+}
+
+.title {
+  margin: 30px auto 30px;
+  font-weight: 300;
+  font-size: 2.5em;
+  text-align: center;
+  padding: 30px 0px 60px;
+  border-bottom: 0.3px solid rgba(var(--gray-color), 0.5);
+}
+
+.form {
+  position: relative;
+  border-radius: 18px;
+  box-shadow: var(--shadow) rgba(var(--gray-color), 0.2);
+  width: 80%;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.form:hover {
+  box-shadow: var(--shadow) rgba(var(--gray-color), 0.5);
+}
+
+.colorCorner {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: -60px;
+  left: -60px;
+  background: rgba(var(--dark-color), 0.3);
+  border: 0.3px solid rgba(var(--dark-color), 0.4);
+  border-radius: 70%;
+}
+
+.formWrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.formContainer {
+  flex: 1;
+  max-width: 40%;
+  margin: 20px auto;
+}
+
+.formContainer input {
+  width: 100%;
+  padding: 6px;
+  border-radius: 5px;
+  border: 0.3px solid rgba(var(--dark-color), 0.4);
+  font-weight: 300;
+  font-size: 1.1em;
+}
+
+.formContainer select {
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  border: 0.3px solid rgba(var(--dark-color), 0.4);
+  font-weight: 300;
+  font-size: 1.1em;
+}
+
+.label,
+.input,
+.select,
+.option .input::placeholder {
+  font-weight: 300;
+  font-size: 1.1em;
+}
+
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: 80%;
+  margin: 25px 0px;
+}
+
+.checkboxContainer input[type="checkbox"] {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  width: 20px;
+}
+
+.addButton {
+  display: block;
+  padding: 9px;
+  border-radius: 10px;
+  color: rgba(var(--white-color), 0.9);
+  margin: 0px auto 30px;
+  width: 80%;
+  border: rgba(var(--gray-color), 0.5) solid 0.3px;
+  background: rgba(var(--primary-color), 0.5);
+}
+
+.addButton:hover {
+  background: rgba(var(--primary-color), 0.6);
+}

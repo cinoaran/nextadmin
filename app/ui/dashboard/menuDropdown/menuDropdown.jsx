@@ -6,6 +6,7 @@ import UserDropdownList from "../../userDropdownList/userDropdownList";
 
 const MenuDropdown = ({ user }) => {
   const [open, setOpen] = useState(false);
+  const handleClose = () => setOpen(false);
 
   return (
     <div className={styles.container}>
@@ -13,7 +14,7 @@ const MenuDropdown = ({ user }) => {
 
       {open && (
         <div onMouseLeave={() => setOpen(false)}>
-          <UserDropdownList {...user} />
+          <UserDropdownList {...user} handleClose={handleClose} />
         </div>
       )}
     </div>

@@ -12,6 +12,7 @@ const UserDropdownList = ({
   dashboardPath,
   profilePath,
   messagePath,
+  handleClose,
 }) => {
   const userAvatar = image ? (
     <Image src={`/${image}`} width="60" height="60" alt="User Image" />
@@ -22,6 +23,9 @@ const UserDropdownList = ({
   return (
     <div className={styles.userPopup}>
       <div className={styles.userPopupDetails}>
+        <div onClick={handleClose} className={styles.close}>
+          <MdClose size="15" />
+        </div>
         <div className={styles.userAvatar}>
           <div className={styles.userAvatarContent}>{userAvatar}</div>
         </div>

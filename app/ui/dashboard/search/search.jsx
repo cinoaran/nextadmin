@@ -4,7 +4,7 @@ import { MdSearch } from "react-icons/md";
 const Search = ({ placeholder }) => {
   return (
     <div className={styles.search}>
-      <MdSearch className={styles.icon} />
+      <MdSearch className={styles.icon} size="22px" />
       <input type="text" placeholder={placeholder} className={styles.input} />
     </div>
   );
