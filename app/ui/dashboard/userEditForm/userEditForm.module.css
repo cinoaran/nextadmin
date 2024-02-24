@@ -1,0 +1,194 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 0px;
+  min-height: 700px;
+  width: 90%;
+}
+
+.formHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border-bottom: 0.3px solid rgba(var(--gray-color), 0.5);
+  margin: 10px auto;
+}
+
+.title {
+  margin: 10px auto;
+  line-height: 1.1;
+  font-weight: 300;
+  font-size: 2em;
+  text-align: center;
+  padding: 10px;
+}
+
+.form {
+  position: relative;
+  border-radius: 18px;
+  box-shadow: var(--shadow) rgba(var(--gray-color), 0.2);
+  padding: 10px;
+  overflow: hidden;
+}
+
+.form:hover {
+  box-shadow: var(--shadow) rgba(var(--gray-color), 0.5);
+}
+
+.colorCorner {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: -60px;
+  left: -60px;
+  background: rgba(var(--dark-color), 0.3);
+  border: 0.6px solid rgba(var(--dark-color), 0.9);
+  border-radius: 70%;
+}
+
+.status {
+  padding: 10px;
+}
+
+.formWrapper,
+.addressContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  gap: 40px;
+}
+
+.formContainer,
+.formContainerBlocked {
+  flex: 1;
+  max-width: 40%;
+  margin: 20px auto;
+  transition: all 0.3s ease-in;
+}
+
+.formContainerBlocked {
+  display: none;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.labelError {
+  color: rgba(var(--danger-color), 0.9);
+  font-size: 1em;
+}
+
+.avatarImage {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.avatarImage span {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-right: 10%;
+  gap: 10px;
+  width: 100%;
+  font-weight: 300;
+  font-size: 0.95em;
+  color: rgba(var(--dark-color), 0.5);
+  border-bottom: 0.3px solid rgba(var(--dark-color), 0.4);
+  cursor: pointer;
+}
+
+.avatarImage span.deleteImage:hover {
+  font-weight: 300;
+  font-size: 0.95em;
+  color: rgba(var(--dark-color), 0.9);
+  border-bottom: 0.3px solid rgba(var(--dark-color), 0.4);
+  cursor: pointer;
+}
+
+.avatarImage span.deleteImage svg {
+  padding: 2px;
+  border-radius: 50%;
+  border: 0.3px solid rgba(var(--dark-color), 0.4);
+}
+
+.avatarImage img {
+  max-width: fit-content;
+  padding: 2px;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: 0.3px solid rgba(var(--dark-color), 0.4);
+  cursor: pointer;
+}
+
+.avatarImage img:hover {
+  padding: 5px;
+}
+
+.inputFile[type="file"] {
+  display: none;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-weight: 300;
+  font-size: 1.2em;
+  width: 220px;
+  color: rgba(var(--dark-color), 0.9);
+  cursor: pointer;
+}
+
+.checkboxSvg {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  font-size: 1.2em;
+  padding: 2px;
+  border: 0.3px solid rgba(var(--primary-color), 0.4);
+  color: rgba(var(--dark-color), 0.9);
+  cursor: pointer;
+}
+
+.addButton {
+  display: block;
+  padding: 9px;
+  border-radius: 10px;
+  color: rgba(var(--white-color), 0.9);
+  margin: 30px auto;
+  width: 80%;
+  border: rgba(var(--gray-color), 0.5) solid 0.3px;
+  background: rgba(var(--primary-color), 0.5);
+}
+
+.addButton:hover {
+  background: rgba(var(--primary-color), 0.6);
+}
+
+.addButton:disabled {
+  background: rgba(var(--dark-color), 0.3);
+}
+
+@media screen and (max-width: 968px) {
+  .formWrapper,
+  .addressContainer,
+  .formHeader {
+    display: block;
+  }
+  .container,
+  .formContainer,
+  .addressContainer {
+    max-width: 100%;
+  }
+}

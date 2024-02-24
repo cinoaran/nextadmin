@@ -3,11 +3,12 @@
   align-items: center;
   border: 0.3px solid rgba(var(--dark-color), 0.3);
   border-radius: 10px;
+  width: 300px;
 }
 
-.input {
-  max-width: 160px;
+.search .input {
   border: none;
+  line-height: 2.2;
   color: rgba(var(--dark-color), 0.6);
 }
 
@@ -15,15 +16,23 @@
   color: rgba(var(--dark-color), 0.4);
 }
 
-.icon {
+.search .icon {
   display: flex;
   align-items: center;
   gap: 10px;
   width: 40px;
   padding: 2px;
-  color: rgba(var(--dark-color), 0.8);
+  color: rgba(var(--dark-color), 0.5);
 }
 
-.input:hover::placeholder {
+.search:hover,
+.search .input:hover::placeholder {
   color: rgba(var(--dark-color), 0.5);
+}
+
+@media screen and (max-width: 560px) {
+  .search {
+    width: 100%;
+    margin: 0px auto;
+  }
 }

@@ -1,26 +1,51 @@
 const mongoose = require("mongoose");
 import bcrypt from "bcryptjs";
 
-const addressSchema = new mongoose.Schema({
-  country: {
+const billingAddressSchema = new mongoose.Schema({
+  billingCountry: {
     type: String,
     required: true,
   },
-  street1: {
+  billingStreetMain: {
     type: String,
     required: true,
   },
-  street2: {
+  billingStreetAdditive: {
     type: String,
   },
-  city: {
+  billingCity: {
     type: String,
     required: true,
   },
-  province: {
+  billingLand: {
     type: String,
   },
-  zip: {
+  billingZip: {
+    type: String,
+    required: true,
+  },
+});
+
+const shippingAddressSchema = new mongoose.Schema({
+  shippingCountry: {
+    type: String,
+    required: true,
+  },
+  shippingStreetMain: {
+    type: String,
+    required: true,
+  },
+  shippingStreetAdditive: {
+    type: String,
+  },
+  shippingCity: {
+    type: String,
+    required: true,
+  },
+  shippingLand: {
+    type: String,
+  },
+  shippingZip: {
     type: String,
     required: true,
   },
@@ -55,31 +80,29 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  verified: {
+  emailVerified: {
     type: Boolean,
     default: false,
   },
-  isAdmin: {
-    type: Boolean,
-    default: false,
-  },
-  isMerchant: {
-    type: Boolean,
-    default: false,
-  },
-  isUser: {
-    type: Boolean,
-    default: true,
+  range: {
+    type: String,
+    enum: ["isAdmin", "isOffice", "isMerchant", "isCustomer"],
+    default: "isCustomer",
   },
   status: {
     type: String,
     enum: ["Done", "Pending", "Cancelled"],
   },
-  shippingAddress: addressSchema,
-  billingAddress: addressSchema,
+  onlyBilling: {
+    type: Boolean,
+    default: true,
+  },
+  shippingAddress: shippingAddressSchema,
+  billingAddress: billingAddressSchema,
 });
 userSchema.methods.matchPassword = async function (enteredPassword) {
-  return await bcrypt.compare(enteredPassword, this.password);
+  const isMatch = await bcrypt.compare(enteredPassword, this.password);
+  return isMatch;
 };
 
 userSchema.pre("save", async function (next) {

@@ -91,63 +91,59 @@ const TopNavbar = () => {
 
   return (
     <div
-      className={styles.container}
+      className={styles.wrapper}
       onMouseLeave={() => setSideBarStatus(false)}
     >
-      <div className={styles.wrapper}>
-        <div
-          className={styles.containerHeader}
-          onClick={() => setSideBarStatus(!sideBarStatus)}
-        >
-          <h2 className={styles.toggleHeader}>
-            {!sideBarStatus ? (
-              <MdOutlineSettings size="24" />
-            ) : (
-              <MdOutlineVerticalAlignTop size="19" />
-            )}
-          </h2>
-        </div>
-        {sideBarStatus &&
-          menuItems.map((cat) => (
-            <div className={styles.containerToggle} key={cat.title}>
-              <div
-                key={cat.title}
-                className={styles.navLinks}
-                onClick={() => setSideBarStatus(!sideBarStatus)}
-              >
-                <div className={styles.sideIcons}>{cat.icon}</div>
-                <div>{cat.title}</div>
-              </div>
-              {
-                <div className={styles.menuContainer}>
-                  {cat.list.map((links) => (
-                    <div
-                      key={links.path}
-                      className={
-                        sideBarStatus ? styles.text : styles.textToggle
-                      }
-                    >
-                      <MenuLink links={links} />
-                    </div>
-                  ))}
-                </div>
-              }
-            </div>
-          ))}
-        <div
-          className={styles.toggleClose}
-          onClick={() => setSideBarStatus(!sideBarStatus)}
-        >
-          {sideBarStatus ? (
-            <span>
-              <MdClose size="20" />
-            </span>
+      <div
+        className={styles.containerHeader}
+        onClick={() => setSideBarStatus(!sideBarStatus)}
+      >
+        <h2 className={styles.toggleHeader}>
+          {!sideBarStatus ? (
+            <MdOutlineSettings size="24" />
           ) : (
-            <span>
-              <MdArrowDropDown size="20" />
-            </span>
+            <MdOutlineVerticalAlignTop size="19" />
           )}
-        </div>
+        </h2>
+      </div>
+      {sideBarStatus &&
+        menuItems.map((cat) => (
+          <div className={styles.containerToggle} key={cat.title}>
+            <div
+              key={cat.title}
+              className={styles.navLinks}
+              onClick={() => setSideBarStatus(!sideBarStatus)}
+            >
+              <div className={styles.sideIcons}>{cat.icon}</div>
+              <div>{cat.title}</div>
+            </div>
+            {
+              <div className={styles.menuContainer}>
+                {cat.list.map((links) => (
+                  <div
+                    key={links.path}
+                    className={sideBarStatus ? styles.text : styles.textToggle}
+                  >
+                    <MenuLink links={links} />
+                  </div>
+                ))}
+              </div>
+            }
+          </div>
+        ))}
+      <div
+        className={styles.toggleClose}
+        onClick={() => setSideBarStatus(!sideBarStatus)}
+      >
+        {sideBarStatus ? (
+          <span>
+            <MdClose size="20" />
+          </span>
+        ) : (
+          <span>
+            <MdArrowDropDown size="20" />
+          </span>
+        )}
       </div>
     </div>
   );

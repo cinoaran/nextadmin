@@ -1,18 +1,14 @@
-.container {
-  position: relative;
-  animation: fadeIn 2.6s cubic-bezier(0.87, 0, 0.13, 1);
-  display: block;
-  margin: 0px auto;
-  width: 100%;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.wrapper {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px;
+  z-index: 100;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: var(--shadow) rgba(var(--gray-color), 0.5);
+  background-color: white;
 }
 
 .containerHeader {
@@ -21,19 +17,6 @@
   justify-content: center;
   height: 20px;
   padding: 4px;
-}
-
-.wrapper {
-  position: absolute;
-  top: -176px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 5px;
-  z-index: 100;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  box-shadow: var(--shadow) rgba(var(--gray-color), 0.5);
-  background-color: #fff;
 }
 
 .menuContainer {
@@ -48,6 +31,7 @@
   flex-direction: column;
   transition: 0.3s ease-in-out;
   gap: 8px;
+  background-color: white;
 }
 
 .navLinks {
@@ -56,6 +40,7 @@
   align-items: center;
   justify-content: flex-start;
   gap: 8px;
+  background-color: #fff;
 }
 
 .toggleClose {
@@ -65,7 +50,7 @@
   flex-direction: column;
   margin: 12px auto;
   padding: 2px;
-  columns: rgba(var(--dark-color), 0.6);
+  color: rgba(var(--dark-color), 0.6);
 }
 
 .toggleHeader > span,

@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 5px 0px;
+  margin: 20px;
+
+  width: 100%;
+}
+
+.title {
+  font-weight: 300;
+  font-size: 0.95em;
+  color: var(rgba(var(--dark-color), 0.8));
+}
+
+.path {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 300;
+  font-size: 0.95em;
+  color: var(rgba(var(--dark-color), 0.8));
+  text-transform: capitalize;
+}
+
+.path:hover {
+  font-weight: 400;
+}

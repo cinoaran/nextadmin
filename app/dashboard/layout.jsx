@@ -3,7 +3,6 @@ import Footer from "../ui/dashboard/footer/footer";
 import Navbar from "../ui/dashboard/navbar/navbar";
 
 import styles from "./dashboard.module.css";
-import TopNavbar from "../ui/dashboard/topNavbar/topNavbar";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -12,14 +11,13 @@ const inter = Inter({
 
 const Layout = ({ children }) => {
   return (
-    <main className={styles.main}>
-      <div className={styles.container}>
+    <div className={styles.container}>
+      <nav>
         <Navbar className={inter.className} />
-        <TopNavbar className={inter.className} />
-        {children}
-        <Footer className={inter.className} />
-      </div>
-    </main>
+      </nav>
+      <main className={styles.main}>{children}</main>
+      <Footer className={inter.className} />
+    </div>
   );
 };
 

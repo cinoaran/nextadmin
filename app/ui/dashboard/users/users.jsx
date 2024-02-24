@@ -5,7 +5,6 @@ import Card from "../card/card";
 import { FaUserPlus } from "react-icons/fa";
 import { MdFilterListAlt } from "react-icons/md";
 import { userRows } from "../../../../data";
-import Search from "../search/search";
 import Status from "../../status/status";
 import Link from "next/link";
 import Pagination from "../../pagination/pagination";
@@ -15,14 +14,10 @@ const Users = () => {
   const [toggle, setToggle] = useState(false);
   return (
     <div className={styles.container}>
-      <div className={styles.header}>
-        <h2 className={styles.pageTitle}>User List</h2>
-        <Link href={"/dashboard/users/add"}>
-          <span className={styles.add}>
-            <FaUserPlus size="20" /> Add user
-          </span>
-        </Link>
+      <div className={styles.pagination}>
+        <Pagination title="User List" />
       </div>
+
       <div className={styles.toggleContainer}>
         <div className={styles.statusToggle}>
           <div onClick={() => setToggle(!toggle)}>
@@ -47,12 +42,11 @@ const Users = () => {
             </div>
           )}
         </div>
-        <div className={styles.search}>
-          <Search placeholder="Search for a user" />
-        </div>
-      </div>
-      <div className={styles.pagination}>
-        <Pagination />
+        <Link href={"/dashboard/users/add"}>
+          <span className={styles.add}>
+            <FaUserPlus size="20" /> Add user
+          </span>
+        </Link>
       </div>
 
       <div className={styles.userCards}>
